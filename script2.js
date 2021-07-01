@@ -1,11 +1,9 @@
-
 alert('The game will start! Open the console and run "game()"')
 
 function computerPlay () {
     let choices = ['rock', 'scissors', 'paper']
     return choices[Math.floor(Math.random() * choices.length)]
 }
-
 
 function game() {
     let keepGoing = 0
