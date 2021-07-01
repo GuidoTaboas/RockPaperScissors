@@ -1,6 +1,4 @@
 
-
-
 alert('The game will start! Open the console and run "game()"')
 
 function computerPlay () {
@@ -8,6 +6,10 @@ function computerPlay () {
     return choices[Math.floor(Math.random() * choices.length)]
 }
 
+
+const choicesArray = {'rock':'scissors',
+                        'scissors':'paper',
+                        'paper':'rock'}
 
 function game() {
     let keepGoing = 0
