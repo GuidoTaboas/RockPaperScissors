@@ -5,8 +5,9 @@ html {
 
 body {
     display: flex;
+    position: relative;
     flex-direction: column;
-    padding-top: 25px;
+    padding-top: 0px;
     background: rgb(205,233,221);
     background: radial-gradient(circle, rgba(205,233,221,1) 0%, rgba(124,176,188,1) 65%, rgba(171,189,248,1) 100%);
 }
@@ -25,9 +26,17 @@ h1 {
     width: 900px;
 }
 
-img {
+.buttonsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 300px 0px 300px;
+}
+
+.button {
     border: none;
     margin: 5px;
+    width: 25%;
+    height: auto;
 }
 
 .button:hover {
@@ -35,26 +44,43 @@ img {
     cursor: pointer;
 }
 
-.buttonsContainer {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 50px 300px 0px 300px;
-}
-
-.button {
-    border: none;
-    margin: 5px;
-}
-
 .messageBox { 
     display: flex;
     font-size: 1.9em;
-    font-weight: 8  00;
+    font-weight: 800;
     height: 50px;
     white-space: pre;
     text-align: center;
     justify-content: center;
     color: #1F2667;
-    margin-top: 50px
+    margin-top: 30px
+}
+  
+  #history {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    height: 100px;
+    width: 200px; 
+    font-size: 1.2em;
+    color: #1F2667;
+    overflow: auto;
+    opacity: 0.1;
 }
 
+#history:hover {
+    opacity: 0.55;
+}
+
+
+.logTable, th, td {
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+
+  td {
+    border-bottom: hidden;
+  }
+  
+
+  
