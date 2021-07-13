@@ -9,6 +9,7 @@ const SCISSORS = document.querySelector('#scissors');
 const BUTTONS = document.querySelectorAll('.button');
 const IMG_DISPLAY = document.querySelector('.imageDisplay')
 const MESSAGE_BOX = document.querySelector('.messageBox');
+const LOG_BUTTON = document.getElementsByClassName('logButton')
 
 const IMG_ROCK = new Image()
 IMG_ROCK.src = 'images/rock.png'
@@ -92,7 +93,7 @@ function updateIMG(IMG_DISPLAY, COMPUTER_CHOICE) {
     IMG_DISPLAY.appendChild(chooseImg(COMPUTER_CHOICE))
 }
 
-const LOG_BUTTON = document.getElementsByClassName('logButton')
+
 console.log(LOG_BUTTON)
 for (let i = 0; i < LOG_BUTTON.length; i++) {
     LOG_BUTTON[i].addEventListener('click', function() {
