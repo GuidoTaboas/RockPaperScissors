@@ -91,7 +91,20 @@ function updateIMG(IMG_DISPLAY, COMPUTER_CHOICE) {
     IMG_DISPLAY.innerHTML = '';
     IMG_DISPLAY.appendChild(chooseImg(COMPUTER_CHOICE))
 }
-   
+
+const LOG_BUTTON = document.getElementsByClassName('logButton')
+console.log(LOG_BUTTON)
+for (let i = 0; i < LOG_BUTTON.length; i++) {
+    LOG_BUTTON[i].addEventListener('click', function() {
+        let logAtt = document.getElementsByClassName('classChange')[0]
+        if (logAtt.style.visibility === 'hidden') {
+            logAtt.style.visibility = 'visible'
+        } else {
+            logAtt.style.visibility = 'hidden'
+        }
+    })
+}
+
 for (let i = 0; i < BUTTONS.length; i++) {
     BUTTONS[i].addEventListener('click', function(e) {
             const COMPUTER_CHOICE = computerPlay();  //Calculate computer selection 
@@ -105,7 +118,8 @@ for (let i = 0; i < BUTTONS.length; i++) {
                 userScore = 0;
                 computerScore = 0;
                 keepGoing = 0;
-            }
-           
+            } 
     })
 }
+
+
